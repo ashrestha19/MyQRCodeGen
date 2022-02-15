@@ -11,7 +11,7 @@ namespace MyQRCodeGenerator
             //TODO: convert this into a winform and urlString as an output. 
             var urlString = "https://www.instagram.com/not_a_sirius_baker/"; 
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(urlString, QRCodeGenerator.ECCLevel.Q);
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(urlString, QRCodeGenerator.ECCLevel.Q); // ECCLevel recovery chances.
             QRCode qrCode = new QRCode(qrCodeData);
             Bitmap qrCodeImage = qrCode.GetGraphic(5); // pixels per module
             ImageCodecInfo imageCodecInfo = GetEncoderInfo("image/jpeg");
